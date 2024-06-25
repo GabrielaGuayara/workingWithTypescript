@@ -1,22 +1,30 @@
+// @ts-check
+
 class Vehicle {
-    status = "stopped";
+    //Add appropriate types for all current Vehicle properties and method parameters.
+    status: "started" | "stopped" = "stopped";
+    make: string;
+    model: string;
+    wheels:number;
+
   
-    constructor(make, model, wheels) {
+    constructor(make: string, model: string, wheels:number) {
       this.make = make;
       this.model = model;
       this.wheels = wheels;
     }
-    start() {
+    start(): void {
       this.status = "started";
     }
-    stop() {
+    stop(): void {
       this.status = "stopped";
     }
   }
   
+
   class Car extends Vehicle {
-    constructor(make, model) {
-      super(make, model, "four");
+    constructor(make:string, model:string) {
+      super(make, model, 4);
     }
   }
   
