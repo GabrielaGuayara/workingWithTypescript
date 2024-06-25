@@ -28,11 +28,13 @@ class Vehicle {
     }
   }
   
+//Fixed the MotorCycle classes as needed according to any TypeScript errors.
   class MotorCycle extends Vehicle {
-    constructor(make, model) {
+    constructor(make:string, model:string) {
       super(make, model, 2);
     }
   }
+  
   
   function printStatus(vehicle) {
     if (vehicle.status === "running") {
