@@ -96,6 +96,7 @@ class NCycle <Type>{
       for(let i= 0; i< this.make.length; i++){
           if(this.make[num]){
             console.log(`This NCycle has a ${this.make} ${this.model} NCycle at ${num}`)
+            break;
           } 
       }
       
