@@ -45,13 +45,15 @@ class Vehicle {
     }
   }
   
+  //Case sentitive: toUppercase !== toUpperCase
   const myHarley = new MotorCycle("Harley-Davidson", "Low Rider S");
   myHarley.start();
   printStatus(myHarley);
-  console.log(myHarley.make.toUppercase());
+  console.log(myHarley.make.toUpperCase());
   
+  //Fix mistype of the word model
   const myBuick = new Car("Buick", "Regal");
   myBuick.wheels = myBuick.wheels - 1;
   console.log(myBuick.wheels);
-  console.log(myBuick.mdl);
+  console.log(myBuick.model);
   
