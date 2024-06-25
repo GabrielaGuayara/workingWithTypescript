@@ -21,7 +21,7 @@ class Vehicle {
     }
   }
   
-
+//Adjust the Car according to any TypeScript errors.
   class Car extends Vehicle {
     constructor(make:string, model:string) {
       super(make, model, 4);
