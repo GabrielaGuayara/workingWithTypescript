@@ -63,16 +63,16 @@ class Vehicle {
 
 //PART THREE: Creating a generic class
 
-class NCycle <T>{
+class NCycle <Type>{
   //Add appropriate types for all current Vehicle properties and method parameters.
   status: Status = "stopped";
  // Allow make and model to have either the generic type or an array of the generic type.
-  make: T | T[];
-  model: T | T[];
+  make: Type | Type[];
+  model: Type | Type[];
   wheels:number;
 
 //Adjust the constructor parameters to have either the generic type or an array of the generic type.
-  constructor(make:  T | T[], model: T | T[], wheels:number) {
+  constructor(make:  Type | Type[], model: Type | Type[], wheels:number) {
     this.make = make;
     this.model = model;
     this.wheels = wheels;
@@ -85,11 +85,20 @@ class NCycle <T>{
   }
 
   //Method print that returns nothing and has a single number parameter 
-  print(x: number = 0) :void{
+  print(num: number = 0) :void{
     if(!Array.isArray(this.make) && !Array.isArray(this.model)){
+    
       console.log(`This is a ${this.make} ${this.model} NCycle.`);
-    }else if (Array.isArray(this.make) && Array.isArray(this.model)){
-      console.log(`This NCycle has a ${this.make} ${this.model} NCycle.`)
+    }
+     //If statement to check if make and model are arrays and the index of parameter exists in each.
+    else if (Array.isArray(this.make) && Array.isArray(this.model)){
+     
+      for(let i= 0; i< this.make.length; i++){
+          if(this.make[num]){
+            console.log(`This NCycle has a ${this.make} ${this.model} NCycle at ${num}`)
+          } 
+      }
+      
     }else{
       "This NCycle was not created properly."
     }

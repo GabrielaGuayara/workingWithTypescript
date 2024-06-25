@@ -46,8 +46,7 @@ const myBuick = new Car("Buick", "Regal");
 myBuick.wheels = myBuick.wheels - 1;
 console.log(myBuick.wheels);
 console.log(myBuick.model);
-//PART TWO: Creating a generic class
-// @ts-check
+//PART THREE: Creating a generic class
 class NCycle {
     //Adjust the constructor parameters to have either the generic type or an array of the generic type.
     constructor(make, model, wheels) {
