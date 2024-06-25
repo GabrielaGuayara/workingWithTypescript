@@ -35,9 +35,10 @@ class Vehicle {
     }
   }
   
-  
-  function printStatus(vehicle) {
-    if (vehicle.status === "running") {
+//Change the printStatus function to accept a parameter of type Vehicle.
+//Add void becuase function does not return a value
+  function printStatus(vehicle: Vehicle): void {
+    if (vehicle.status === "started") {
       console.log("The vehicle is running.");
     } else {
       console.log("The vehicle is stopped.");
